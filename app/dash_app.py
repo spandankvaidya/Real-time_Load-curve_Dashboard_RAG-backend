@@ -2,7 +2,7 @@
 from dash import Dash, html, dcc
 from dash.dependencies import Input, Output, State
 import plotly.graph_objs as go
-from model import run_prediction_for_date
+from app.model import run_prediction_for_date
 
 def create_dash_app():
     dash_app = Dash(__name__, requests_pathname_prefix='/dashboard/')
