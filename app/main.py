@@ -5,29 +5,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.wsgi import WSGIMiddleware
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
-from contextlib import asynccontextmanager
 
-from app.dash_app import create_dash_app
-from app.chatbot_logic import setup_rag_pipeline, generate_answer
+# Import the simplified functions from our logic files
+from dash_app import create_dash_app
+from chatbot_logic import generate_answer # <-- Import the new function
 
 class ChatQuery(BaseModel):
     question: str
 
-# Dictionary to hold our application's state (the RAG chain)
-app_state = {}
-
-# Use the new lifespan context manager for startup/shutdown events
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # On startup
-    print("--- Server starting up ---")
-    app_state["rag_chain"] = setup_rag_pipeline()
-    yield
-    # On shutdown
-    print("--- Server shutting down ---")
-    app_state.clear()
-
-app = FastAPI(lifespan=lifespan)
+# The lifespan manager and app_state are no longer needed.
+# We can declare the FastAPI app directly.
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -43,10 +31,10 @@ def root():
 
 @app.post("/ask-chatbot")
 async def ask_chatbot(query: ChatQuery):
-    # Use the globally available RAG chain from app_state
-    answer = await generate_answer(app_state.get("rag_chain"), query.question)
+    # Directly call the new, simplified generate_answer function.
+    answer = await generate_answer(query.question)
     return {"answer": answer}
 
-# Mount the Dash app
+# Mount the Dash app (this part does not need to change)
 dash_app = create_dash_app()
 app.mount("/dashboard", WSGIMiddleware(dash_app.server))
