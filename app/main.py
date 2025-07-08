@@ -7,8 +7,8 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from contextlib import asynccontextmanager
 
-from app.dash_app import create_dash_app
-from app.chatbot_logic import setup_rag_pipeline, generate_answer
+from dash_app import create_dash_app
+from chatbot_logic import setup_rag_pipeline, generate_answer
 
 class ChatQuery(BaseModel):
     question: str
