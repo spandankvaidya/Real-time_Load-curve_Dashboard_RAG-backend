@@ -7,8 +7,8 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 # Import the simplified functions from our logic files
-from dash_app import create_dash_app
-from chatbot_logic import generate_answer # <-- Import the new function
+from app.dash_app import create_dash_app
+from app.chatbot_logic import generate_answer # <-- Import the new function
 
 class ChatQuery(BaseModel):
     question: str
