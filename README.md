@@ -2,9 +2,9 @@
 
 This repository contains the backend service for the Real-Time Power Forecast Dashboard. It's a robust Python application built with FastAPI that serves both the machine learning predictions and the AI chatbot functionality.
 
-![Project Screenshot]([https://via.placeholder.com/800x400.png?text=Backend+Architecture+Diagram](https://github.com/spandankvaidya/Real-time_Load-curve_Dashboard_RAG-backend/blob/main/Dashboard_screenshot.png))
+![Project Screenshot]([https://via.placeholder.com/800x400.png?text=Backend+Architecture+Diagram](https://github.com/spandankvaidya/Real-time_Load-curve_Dashboard_RAG-backend/blob/main/Dashboard_screenshot.png])
 
-## ✨ Core Features
+## Core Features
 
 -   **High-Performance API:** Built with **FastAPI** for fast, asynchronous request handling.
 -   **Dynamic Graph Generation:** A stateless **Plotly Dash** application is mounted on FastAPI. It generates and serves the live prediction graph on-the-fly based on the date provided in the URL (`/dashboard/:date`).
@@ -13,7 +13,7 @@ This repository contains the backend service for the Real-Time Power Forecast Da
 -   **Efficient Data Processing:** Leverages **Polars** for high-speed data loading and feature engineering from the source CSV files.
 -   **Cloud-Ready:** Configured for seamless deployment on **Render** using a `Procfile` and Gunicorn.
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 
 <div>
   <a href="https://www.python.org/">
