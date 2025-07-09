@@ -1,33 +1,15 @@
-# requirements.txt
-
-# --- FastAPI and Server ---
 fastapi
 uvicorn
-gunicorn
-
-# --- Forecasting Model and Data Handling ---
 polars
 lightgbm
 numpy
 python-dateutil
-pandas
-pyarrow
-
-# --- Plotly Dash for Live Graph ---
 dash
+gunicorn
 plotly
-
-# --- RAG Chatbot and LangChain ---
+pyarrow
+pandas
+groq
 langchain
 langchain-groq
-langchain-community
-
-# Document Loaders and Vector Store
-pypdf
-faiss-cpu
-sentence-transformers
-
-# Keras 3 Compatibility for Transformers
-# Installs TensorFlow and the Keras 2.x API shim
-tf-keras
-tensorflow
+python-dotenv
