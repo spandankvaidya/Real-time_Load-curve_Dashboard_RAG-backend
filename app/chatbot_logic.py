@@ -15,7 +15,7 @@ except KeyError:
 #    We use 'gemma-9b-it', the instruction-tuned version, which is perfect for a chatbot.
 llm = ChatGroq(
     groq_api_key=groq_api_key,
-    model_name="gemma-9b-it",
+    model_name='gemma2-9b-it',
     temperature=0.7  # Adjust for more or less creative responses
 )
 
