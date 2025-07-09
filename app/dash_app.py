@@ -11,7 +11,7 @@ def create_dash_app():
     dash_app.layout = html.Div([
         dcc.Location(id='url', refresh=False),
         dcc.Store(id='prediction-data-store'),
-        html.H3("🔴 Real-time Load Curve", style={"textAlign": "center"}),
+        html.H3("Dataset: www.kaggle.com/datasets/shivamsoni017/load-curve-graphs", style={"textAlign": "center"}),
         html.H4(id='selected-date-display'),
         dcc.Graph(id='live-graph', style={"height": "80vh"}),
         dcc.Interval(id='interval', interval=1000, n_intervals=0)
