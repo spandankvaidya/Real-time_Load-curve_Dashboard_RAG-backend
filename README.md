@@ -2,7 +2,7 @@
 
 This repository contains the backend service for the Real-Time Power Forecast Dashboard. It's a robust Python application built with FastAPI that serves both the machine learning predictions and the AI chatbot functionality.
 
-![Project Screenshot]([https://via.placeholder.com/800x400.png?text=Backend+Architecture+Diagram](https://github.com/spandankvaidya/Real-time_Load-curve_Dashboard_RAG-backend/blob/main/Dashboard_screenshot.png])
+![Backend Screenshot](https://raw.githubusercontent.com/spandankvaidya/Real-time_Load-curve_Dashboard_RAG-backend/main/Dashboard_screenshot.png)
 
 ## Core Features
 
