@@ -5,7 +5,7 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 # --- NEW IMPORTS for the chatbot ---
-from app.chatbot import get_chatbot_response
+from app.chatbot_logic import get_chatbot_response
 
 # --- EXISTING IMPORTS for the dash app ---
 from app.dash_app import create_dash_app
